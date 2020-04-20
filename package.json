@@ -1,0 +1,35 @@
+{
+  "name": "easy-bank-code-challenge",
+  "version": "1.0.0",
+  "description": "frontend coding challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phoen1x84/easy-bank-code-challenge.git"
+  },
+  "keywords": [
+    "front-end",
+    "mentor"
+  ],
+  "author": "Matthew Neil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phoen1x84/easy-bank-code-challenge/issues"
+  },
+  "homepage": "https://github.com/Phoen1x84/easy-bank-code-challenge#readme",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "node-normalize-scss": "^8.0.1"
+  }
+}

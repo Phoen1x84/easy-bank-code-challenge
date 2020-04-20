@@ -1,0 +1,12 @@
+// foundation files, these are the core files that build up the brand, breakpoints and typography
+@import './foundation/_brand.scss';
+@import './foundation/_breakpoints.scss';
+
+// frontend mentor styles
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
