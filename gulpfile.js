@@ -36,7 +36,7 @@ function styles() {
 }
 
 function watchFiles() {
-    watch(['src/*.scss', 'src/_*.scss'], series(styles));    
+    watch(['src/*.scss', 'src/**/_*.scss'], series(styles));    
 }
 
 // default to use when developing

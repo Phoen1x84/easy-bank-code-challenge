@@ -1,6 +1,14 @@
+@import 'normalize';
+
 // foundation files, these are the core files that build up the brand, breakpoints and typography
 @import './foundation/_brand.scss';
 @import './foundation/_breakpoints.scss';
+@import './foundation/_typography.scss';
+
+
+// features
+@import './feature/_cta-button.scss';
+@import './feature/_hero-banner.scss';
 
 // frontend mentor styles
 .attribution {

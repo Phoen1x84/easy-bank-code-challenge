@@ -27,9 +27,8 @@
     "gulp-connect": "^5.7.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.0.2",
+    "node-normalize-scss": "^8.0.1",
     "node-sass": "^4.13.1"
   },
-  "dependencies": {
-    "node-normalize-scss": "^8.0.1"
-  }
+  "dependencies": {}
 }
