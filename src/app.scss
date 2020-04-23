@@ -7,8 +7,12 @@
 
 
 // features
+@import './feature/_article-card.scss';
 @import './feature/_cta-button.scss';
 @import './feature/_hero-banner.scss';
+@import './feature/_news.scss';
+@import './feature/_product.scss';
+@import './feature/_services.scss';
 
 // frontend mentor styles
 .attribution {

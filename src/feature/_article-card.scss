@@ -1,0 +1,25 @@
+.article-card {
+    background: $white;    
+    border-radius: 10px;
+    margin: 40px 20px;
+    overflow: hidden;
+
+    &__content {
+        padding: 30px;
+    }
+
+    &__author {
+        display: inline-block;
+        color: $grayish-blue;        
+        font-size: 11px;        
+    }
+
+    &__title {
+        margin: 10px 0;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 13px; 
+    }
+}

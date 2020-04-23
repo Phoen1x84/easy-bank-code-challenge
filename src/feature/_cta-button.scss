@@ -2,11 +2,10 @@
     align-items: center;
     background: $lime-green linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
     border-radius: 30px;
-    padding: 10px 30px;
+    padding: 10px 40px;
     color: $white;
     display: inline-flex;    
-    min-width: 120px;
-    font-weight: bold;
+    font-weight: $regular;
     font-size: 14px;
     letter-spacing: 0.05rem;
     text-decoration: none;

@@ -1,0 +1,13 @@
+.news {    
+    background: $very-light-gray;
+    padding: 60px 0;
+
+    &__inner {
+        max-width: $site-width;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 0 40px;
+    }
+}
