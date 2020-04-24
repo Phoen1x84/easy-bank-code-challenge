@@ -6,6 +6,7 @@ const connect = require('gulp-connect');
 
 function server(){
   connect.server({
+    root: 'dist',
     livereload: true    
   });
 } 
@@ -38,7 +39,7 @@ function styles() {
 function html() {
     console.log('\x1b[33m%s\x1b[0m', 'compiling index.html');
     return (
-        src('./index.html')
+        src('./public/index.html')
         .pipe(dest('./dist'))
     );
 }
@@ -46,12 +47,14 @@ function html() {
 function images() {
     console.log('\x1b[33m%s\x1b[0m', 'copying images');
     return (
-        src('./images/**')
+        src('./public/images/**')
         .pipe(dest('./dist/images'))
     );
 }
 
 function watchFiles() {
+    watch('./public/*.html', series(html));
+    watch('./public/images/**', series(images));
     watch(['src/*.scss', 'src/**/_*.scss'], series(styles));    
 }
 
