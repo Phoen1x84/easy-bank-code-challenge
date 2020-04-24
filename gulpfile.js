@@ -35,6 +35,22 @@ function styles() {
     );
 }
 
+function html() {
+    console.log('\x1b[33m%s\x1b[0m', 'compiling index.html');
+    return (
+        src('./index.html')
+        .pipe(dest('./dist'))
+    );
+}
+
+function images() {
+    console.log('\x1b[33m%s\x1b[0m', 'copying images');
+    return (
+        src('./images/**')
+        .pipe(dest('./dist/images'))
+    );
+}
+
 function watchFiles() {
     watch(['src/*.scss', 'src/**/_*.scss'], series(styles));    
 }
@@ -43,4 +59,4 @@ function watchFiles() {
 exports.default = parallel(server, watchFiles);
 
 // production build assets
-exports.build = series(clean, styles);
+exports.build = series(clean, styles, html, images);

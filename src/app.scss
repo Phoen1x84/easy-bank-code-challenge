@@ -9,15 +9,19 @@
 // features
 @import './feature/_article-card.scss';
 @import './feature/_cta-button.scss';
+@import './feature/_globa-footer.scss';
 @import './feature/_hero-banner.scss';
+@import './feature/_list.scss';
 @import './feature/_news.scss';
 @import './feature/_product.scss';
 @import './feature/_services.scss';
+@import './feature/_social.scss';
 
 // frontend mentor styles
 .attribution {
     font-size: 11px;
     text-align: center;
+    padding: 5px 0;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);

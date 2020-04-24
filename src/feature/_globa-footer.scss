@@ -1,0 +1,20 @@
+.global-footer {
+    text-align: center;
+    background: $dark-blue;
+    padding: 35px 22px;
+
+    &__inner {
+        max-width: $site-width;
+        margin: 0 auto;
+    }
+}
+
+#a {
+    fill: #fff;
+}
+
+.site-logo {
+    background: white;
+    fill: url(#a);
+    margin: 0 auto;
+}
