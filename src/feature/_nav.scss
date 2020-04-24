@@ -1,0 +1,46 @@
+.nav {
+    background: $white;
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    max-width: 90vw;
+    margin: 0 auto;    
+
+    &:before {
+        background: linear-gradient(
+            180deg,
+            rgba($dark-blue, 1) 30%,
+            rgba($very-light-gray, 0.3) 100%
+        );
+        content: '';
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.8;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        color: $dark-blue;
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+}

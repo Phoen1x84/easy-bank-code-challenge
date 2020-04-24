@@ -1,0 +1,45 @@
+.menu-btn {
+    $this: &;
+
+    border: none;
+    background: none;
+    display: block;
+    width: 44px;
+    min-height: 32px;
+    padding: 10px;
+    margin-left: auto;
+    outline: none;
+
+    &--active {
+        #{$this}__line {
+            &:nth-child(1) {
+                transform: translateY(1px) rotate(-45deg);
+            }
+
+            &:nth-child(2) {
+                transform: translateX(10px);
+                opacity: 0;
+            }
+    
+            &:nth-child(3) {
+                transform: translateY(-1px) rotate(45deg);
+            }
+        }
+    }
+
+    &__line {
+        background: $dark-blue;
+        display: block;
+        width: 100%;
+        height: 1px;  
+        transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+
+        &:nth-child(1) {
+            transform: translateY(-4px);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(4px);
+        }
+    }
+}

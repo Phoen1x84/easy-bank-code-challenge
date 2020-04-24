@@ -11,9 +11,14 @@
 </head>
 
 <body>
-
-  <header class="site-header" hidden>
+  <header class="site-header">
     <img src="./images/logo.svg" alt="easybank" />
+    <button class="menu-btn">
+      <span class="menu-btn__line"></span>
+      <span class="menu-btn__line"></span>
+      <span class="menu-btn__line"></span>
+      <span hidden>Menu</span>
+    </button>   
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item">
@@ -42,11 +47,10 @@
           </a>
         </li>
       </ul>
-      <a href="#" title="request invite" rel="noopener" class="cta-link">
+      <a href="#" title="request invite" rel="noopener" class="cta-button cta-button--device-hidden">
         Request Invite
       </a>
     </nav> <!-- nav ends -->
-    <!-- <button>menu</button>  -->
   </header>
   <!-- header ends -->
   <article class="hero-banner">

@@ -10,4 +10,8 @@
     letter-spacing: 0.05rem;
     text-decoration: none;
     min-height: 52px;   
+
+    &--device-hidden {
+        display: none;
+    }
 }
