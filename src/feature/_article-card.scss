@@ -2,7 +2,12 @@
     background: $white;    
     border-radius: 10px;
     margin: 40px 22px;
-    overflow: hidden;
+    overflow: hidden;    
+
+    @include breakpoint(medium) {
+        flex-basis: calc((100% / 2) - 44px);
+        margin: 20px 22px;
+    }
 
     &__content {
         padding: 30px;
@@ -16,10 +21,17 @@
 
     &__title {
         margin: 10px 0;
+        @include breakpoint(medium) {
+            font-size: 1.1rem;
+        }
     }
 
     &__text {
         margin: 0;
         font-size: 13px; 
+
+        @include breakpoint(medium) {
+            font-size: 0.9rem;
+        }
     }
 }

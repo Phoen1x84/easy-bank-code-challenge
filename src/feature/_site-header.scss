@@ -1,10 +1,27 @@
 .site-header {    
-    align-items: center;
-    background: $white;
-    display: flex;
+    background: $white;    
     position: sticky;
     top: 0;
-    z-index: 1;
-    height: 60px;
-    padding: 0 22px;
+    z-index: 3;   
+    
+    &__inner {
+        height: 60px;
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: $site-width;       
+        padding: 0 22px;
+        
+        @include breakpoint(medium) {
+            align-items: center;
+            display: flex;
+            padding: 0 20px;        
+            margin: 0 auto;            
+            height: 80px;
+        }
+
+        @include breakpoint(xlarge) {
+            @include column(10);    
+        }
+    }
 }

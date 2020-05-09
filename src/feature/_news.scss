@@ -4,10 +4,40 @@
 
     &__inner {
         max-width: $site-width;
+        margin: 0 auto;
+
+        @include breakpoint(small) {
+            padding: 0 20px;                    
+        }
+
+        @include breakpoint(xlarge) {
+            @include column(10); 
+        }
     }
 
     &__title {
         text-align: center;
         margin: 0 0 30px;
+
+        @include breakpoint(small) {
+            text-align: left;
+        }
+    }
+
+    &__list {
+        @include breakpoint(small) {
+            display: flex;      
+            margin: 0 auto;       
+            max-width: #{$site-width};                
+        }        
+
+        @include breakpoint(medium) {
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint(xlarge) {
+            flex-wrap: nowrap;
+            @include column(10); 
+        }
     }
 }

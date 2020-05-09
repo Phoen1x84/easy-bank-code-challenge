@@ -3,12 +3,28 @@
     padding: 0 20px;
     margin: 0 0 22px;
 
+    @include breakpoint(large) {
+        text-align: left;
+    }
+
+    @include breakpoint(medium) {
+        flex-basis: calc(100% / 2);        
+    }
+
+    @include breakpoint(large) {
+        flex-basis: auto;
+    }
+
     &:last-of-type {
         margin: 0;
     }
 
     &__img {
         margin: 0 auto 40px;
+
+        @include breakpoint(large) {
+            margin: 0 0 40px;
+        }
     }
 
     &__title,

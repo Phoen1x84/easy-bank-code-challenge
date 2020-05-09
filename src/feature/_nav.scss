@@ -9,7 +9,16 @@
     padding: 20px;
     text-align: center;
     max-width: 90vw;
-    margin: 0 auto;    
+    margin: 0 auto; 
+    
+    @include breakpoint(large) {
+        background: transparent;
+        display: block;
+        position: static;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+    }
 
     &:before {
         background: linear-gradient(
@@ -26,6 +35,10 @@
         bottom: 0;
         z-index: -1;
         opacity: 0.8;
+
+        @include breakpoint(large) {
+            display: none;
+        }
     }
 
     &__list {
@@ -33,14 +46,41 @@
         margin: 0;
     }
 
-    &__item {
-        list-style: none;
+    &__item {        
+        list-style: none;        
+
+        @include breakpoint(large) {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        
     }
 
     &__link {
-        color: $dark-blue;
+        color: $grayish-blue;
         display: block;
         padding: 10px 0;
         text-decoration: none;
+        position: relative;
+
+        &:after {
+            background: $lime-green linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        &:hover {      
+            color: $dark-blue;
+            &:after {
+                opacity: 1;
+            }      
+        }
     }
 }

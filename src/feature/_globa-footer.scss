@@ -3,8 +3,38 @@
     background: $dark-blue;
     padding: 35px 22px;
 
+    @include breakpoint(large) {
+        text-align: left;
+    }
+
     &__inner {
         max-width: $site-width;
         margin: 0 auto;
+
+        @include breakpoint(large) {
+            align-items: center;
+            display: flex;
+            padding: 0 20px;        
+            @include column(10);    
+        }
+    }
+
+    &__column {
+        @include breakpoint(large) {
+            align-self: stretch;                      
+            flex-grow: 1;
+            flex-basis: 60%;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                flex-basis: 20%;
+                flex-grow: 0;
+            }
+
+            &:nth-child(3) {
+                margin-left: auto;
+                text-align: right;
+            }            
+        }
     }
 }

@@ -1,28 +1,88 @@
 .hero-banner {
-    background: $very-light-gray url('./../../images/bg-intro-mobile.svg') top right no-repeat;    
-    background-size: contain;
+    background: $very-light-gray;    
     min-height: 100vh;    
-    padding: 0 0 80px;
-    overflow: hidden;
+    padding: 0 0 80px;    
+    position: relative;        
+    
+    @include breakpoint(large) {
+        align-items: center;
+        display: flex;             
+        min-height: 655px;
+    }
+    
+    &:before {
+        background: url('./../../images/bg-intro-mobile.svg') top right no-repeat;    
+        content:'';
+        display: block;        
+        position: absolute;
+        top: -60px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        @include breakpoint(large) {            
+            background: $very-light-gray url('./../../images/bg-intro-desktop.svg') 0 -260px no-repeat;
+            width: 800px;
+            top: 0;
+            left: auto;
+        }
+    }
 
     &__img {
-        transform: translateY(-118px);
-        margin: 0 0 -80px; 
+        transform: translateY(-100px);
+        margin: 0 0 -120px; 
         padding: 0 20px;
+
+        @include breakpoint(large) {
+            transform: translateY(0);
+            position: absolute;
+            margin: 0;
+            bottom: -150px;
+            right: -150px;
+            z-index: 0;
+        }
+    }
+
+    &__inner {
+        max-width: $site-width; 
+        margin: 0 auto;
+        width: 100%;
+
+        @include breakpoint(xlarge) {            
+            @include column(10); 
+        } 
     }
 
     &__content {
         text-align: center;
+
+        @include breakpoint(large) {                                   
+            text-align: left;            
+            position: relative;                
+            z-index: 2;            
+        }
+
+        @include breakpoint(xlarge) {
+            padding: 0;
+        }
+    }
+
+    &__title,
+    &__text {
+        margin: 30px auto;
+        @include breakpoint(large) { 
+            margin: 30px 0;
+        }
     }
 
     &__title {
-        margin: 30px 0;
         padding: 0 16px;
+        max-width: 18ch;
     }
 
-    &__text {
-        margin: 30px 0;
+    &__text {        
         padding: 0 16px;        
-        font-weight: $regular;        
+        font-weight: $regular;              
+        max-width: 46ch;
     }
 }

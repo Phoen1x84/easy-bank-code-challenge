@@ -3,16 +3,43 @@
     text-align: center;
     padding: 80px 0;
 
+    @include breakpoint(large) {
+        text-align: left;
+    }
+
     &__inner {
-        max-width: $site-width;
+        max-width: #{$site-width};
         margin: 0 auto;
+
+        @include breakpoint(small) {
+            padding: 0 20px;        
+            @include column(10);    
+        }
+    }
+
+    &__list {
+        @include breakpoint(medium) {
+            display: flex;      
+            margin: 0 auto;       
+            max-width: #{$site-width};            
+            flex-wrap: wrap;
+        }
+
+        @include breakpoint(large) {
+            flex-wrap: nowrap;
+        }
+
+        @include breakpoint(xlarge) {
+            @include column(10); 
+        }        
     }
 
     &__title {
-        margin: 0 0 40px;
+        margin: 0 0 40px;        
     }
 
     &__text {
         margin: 0 0 40px;
+        max-width: 60ch;
     }
 }

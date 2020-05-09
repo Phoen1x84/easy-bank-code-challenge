@@ -10,6 +10,10 @@
     margin-left: auto;
     outline: none;
 
+    @include breakpoint(large) {
+        display: none;
+    }
+
     &--active {
         #{$this}__line {
             &:nth-child(1) {
