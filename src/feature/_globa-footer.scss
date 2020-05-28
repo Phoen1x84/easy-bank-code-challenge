@@ -3,7 +3,7 @@
     background: $dark-blue;
     padding: 35px 22px;
 
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
         text-align: left;
     }
 
@@ -11,7 +11,7 @@
         max-width: $site-width;
         margin: 0 auto;
 
-        @include breakpoint(large) {
+        @include breakpoint(xlarge) {
             align-items: center;
             display: flex;
             padding: 0 20px;        
@@ -20,7 +20,7 @@
     }
 
     &__column {
-        @include breakpoint(large) {
+        @include breakpoint(xlarge) {
             align-self: stretch;                      
             flex-grow: 1;
             flex-basis: 60%;

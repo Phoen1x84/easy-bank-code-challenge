@@ -36,6 +36,14 @@ function styles() {
     );
 }
 
+function scripts() {
+    return (
+        src('./src/index.js')
+        .pipe(dest('./dist'))
+        .pipe(connect.reload())
+    )
+}
+
 function html() {
     console.log('\x1b[33m%s\x1b[0m', 'compiling index.html');
     return (
@@ -56,10 +64,11 @@ function watchFiles() {
     watch('./public/*.html', series(html));
     watch('./public/images/**', series(images));
     watch(['src/*.scss', 'src/**/_*.scss'], series(styles));    
+    watch('src/*.js', series(scripts));
 }
 
 // default to use when developing
 exports.default = parallel(server, watchFiles);
 
 // production build assets
-exports.build = series(clean, styles, html, images);
+exports.build = series(clean, styles, scripts, html, images);

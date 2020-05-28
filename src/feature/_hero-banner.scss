@@ -23,6 +23,7 @@
         @include breakpoint(large) {            
             background: $very-light-gray url('./../../images/bg-intro-desktop.svg') 0 -260px no-repeat;
             width: 800px;
+            max-width: 50vw;
             top: 0;
             left: auto;
         }
@@ -40,6 +41,7 @@
             bottom: -150px;
             right: -150px;
             z-index: 0;
+            max-width: 60vw;
         }
     }
 
@@ -55,15 +57,18 @@
 
     &__content {
         text-align: center;
+        padding: 0 16px;
+        position: relative;                
+        z-index: 2;            
 
         @include breakpoint(large) {                                   
             text-align: left;            
-            position: relative;                
-            z-index: 2;            
+            max-width: 50vw;
         }
 
         @include breakpoint(xlarge) {
             padding: 0;
+            max-width: 40%;
         }
     }
 
@@ -76,12 +81,10 @@
     }
 
     &__title {
-        padding: 0 16px;
         max-width: 18ch;
     }
 
-    &__text {        
-        padding: 0 16px;        
+    &__text {                
         font-weight: $regular;              
         max-width: 46ch;
     }

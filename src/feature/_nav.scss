@@ -1,16 +1,15 @@
 .nav {
-    background: $white;
-    border-radius: 10px;
-    display: none;
+    $this: &;    
     position: absolute;
     top: 80px;
     left: 0;
-    right: 0;
-    padding: 20px;
+    right: 0;    
     text-align: center;
     max-width: 90vw;
-    margin: 0 auto; 
-    
+    margin: 0 auto;
+    visibility: hidden;    
+    transition: opacity 0.25s ease-in;
+
     @include breakpoint(large) {
         background: transparent;
         display: block;
@@ -18,6 +17,7 @@
         padding: 0;
         margin: 0;
         flex-grow: 1;
+        visibility: visible;
     }
 
     &:before {
@@ -34,24 +34,65 @@
         right: 0;
         bottom: 0;
         z-index: -1;
-        opacity: 0.8;
+        opacity: 0;
+        transition: opacity 0.25s ease-in;
 
         @include breakpoint(large) {
             display: none;
         }
     }
+    
+    &--open {
+        visibility: visible;        
+
+        #{$this}__list {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+        }
+
+        #{$this}__item {            
+            opacity: 1;
+            transform: translateY(0);
+            @for $i from 1 through 5 {
+                &:nth-child(#{$i}) {
+                    transition-delay: 0.25s + $i / 20;
+                }
+            }
+        }
+
+        &:before {
+            opacity: 0.8;
+        }
+    }    
 
     &__list {
-        padding: 0;
+        background: $white;
+        border-radius: 10px;
+        padding: 20px;
         margin: 0;
+        opacity: 0;        
+        transform: translateY(-10px);
+
+        @include breakpoint(large) {
+            border-radius: 0;
+            padding: 0;
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &__item {        
-        list-style: none;        
+        list-style: none;    
+        opacity: 0;    
+        transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+        transform: translateY(-10px);    
 
         @include breakpoint(large) {
             display: inline-block;
             margin: 0 20px;
+            opacity: 1;
+            transform: translateY(0);
         }
         
     }
