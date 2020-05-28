@@ -4,7 +4,10 @@
   "description": "frontend coding challenge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse:dev": "lighthouse http://localhost:8080 --output-path=./lighthouse-results/dev/report.html --view",
+    "lighthouse:ci": "lighthouse https://elated-haibt-e4fa92.netlify.app/ --output-path=./lighthouse-results/live/report-dev.html --view",
+    "build": "gulp build && lighthouse https://elated-haibt-e4fa92.netlify.app/ --output-path=./lighthouse-results/live/report-live.html --view"
   },
   "repository": {
     "type": "git",
