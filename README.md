@@ -1,5 +1,7 @@
 # Frontend Mentor - Easybank landing page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c39dd6ec-e8d4-47ec-9e5d-9c3a3ebbb39a/deploy-status)](https://app.netlify.com/sites/elated-haibt-e4fa92/deploys)
+
 ![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
